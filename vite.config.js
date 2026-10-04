@@ -4,7 +4,7 @@ import { resolve } from "path";
 import { copyFileSync, existsSync } from "fs";
 
 export default defineConfig({
-  base: "/Dept/",
+  base: "/depts2/",
   plugins: [react()],
   resolve: {
     alias: {
@@ -18,9 +18,6 @@ export default defineConfig({
   },
   build: {
     outDir: "dist",
-    // <-- keep rollupOptions only for specific customizations
-    // Do NOT include:
-    // rollupOptions: { external: ... } for app deploys!
   },
   closeBundle() {
     const redirectsPath = resolve(__dirname, "_redirects");
