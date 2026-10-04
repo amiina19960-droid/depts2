@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import logo from "../assets/images/header/logo.svg";
-import bannerVideo from "../assets/videos/INSTRUMENT clicp.mp4";
+import bannerVideo from "../assets/images/INSTRUMENT clicp.mp4";
 
 import notificationIcon from "../assets/images/home/download.png";
 
