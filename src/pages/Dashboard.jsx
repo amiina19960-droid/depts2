@@ -1344,7 +1344,7 @@ export default function Dashboard() {
             />
 
             <div className="dashboard-notice-track">
-              Thank you for your support in Instrument Platform. Kindly
+              Thank you for your support in Dept Platform. Kindly
               read Rules &amp; regulations. Thank you.
             </div>
           </div>
