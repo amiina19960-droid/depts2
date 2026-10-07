@@ -157,7 +157,7 @@ function shuffle(array) {
 }
 
 function makeLocalProductList(start = 100, end = 200) {
-  const base = "/Dept/assets/images/products/";
+  const base = "/depts2/assets/images/products/";
   const list = [];
   for (let i = start; i <= end; i++) {
     list.push(`${base}product1(${i}).png`);
@@ -175,7 +175,7 @@ const Tasks = () => {
         return firstNine;
       }
     } catch (e) {}
-    const base = "/Dept/assets/images/products/";
+    const base = "/depts2/assets/images/products/";
     return Array.from({ length: 9 }, (_, i) => `${base}product1(${100 + i}).png`);
   });
 
@@ -735,10 +735,10 @@ const Tasks = () => {
     };
 
     return (
-      <div className="fixed inset-0 z-50" style={{ display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(0,0,0,0.65)", padding: 16 }}>
-        <div style={{ width: "100%", maxWidth: 420, borderRadius: 18, background: "#1a1a1a", padding: 0, boxShadow: "0 20px 60px rgba(0,0,0,0.5)", overflow: "hidden" }}>
+      <div className="fixed inset-0 z-50" style={{ display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(2, 10, 29, 0.78)", padding: 16 }}>
+        <div style={{ width: "100%", maxWidth: 420, borderRadius: 18, background: "linear-gradient(145deg, #0b2852 0%, #071b3b 58%, #111d50 100%)", padding: 0, boxShadow: "0 20px 60px rgba(0,0,0,0.48)", border: "1px solid rgba(0, 200, 240, 0.55)", overflow: "hidden" }}>
           {/* Progress counter at top */}
-          <div style={{ padding: "16px 18px 8px 18px", color: "#ffffff", fontSize: 28, fontWeight: 700, letterSpacing: -0.5 }}>
+          <div style={{ padding: "16px 18px 8px 18px", color: "#e4f1ff", fontSize: 28, fontWeight: 700, letterSpacing: -0.5 }}>
             {todaysTasks} / {maxTasks}
           </div>
 
@@ -752,7 +752,7 @@ const Tasks = () => {
                 height: 200, 
                 borderRadius: 12, 
                 objectFit: "cover", 
-                border: "3px solid #ffffff",
+                border: "2px solid #00c8f0",
                 display: "block"
               }} 
               onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = DEFAULT_PRODUCT_IMAGE; }} 
@@ -761,44 +761,44 @@ const Tasks = () => {
 
           {/* Product name, rating, and price section */}
           <div style={{ padding: "0 18px 14px 18px" }}>
-            <div style={{ fontSize: 14, fontWeight: 600, color: "#ffffff", lineHeight: 1.3, marginBottom: 8 }}>
+            <div style={{ fontSize: 14, fontWeight: 600, color: "#e4f1ff", lineHeight: 1.3, marginBottom: 8 }}>
               "{truncateText(product.name, 65)}"
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 5, background: "rgba(255,255,255,0.15)", padding: "5px 10px", borderRadius: 18 }}>
-                <span style={{ color: "#ffffff", fontSize: 13, fontWeight: 500 }}>☆</span>
-                <span style={{ color: "#ffffff", fontSize: 13, fontWeight: 600 }}>9.9</span>
+              <div style={{ display: "flex", alignItems: "center", gap: 5, background: "rgba(20, 55, 105, 0.9)", border: "1px solid rgba(0,200,240,0.28)", padding: "5px 10px", borderRadius: 18 }}>
+                <span style={{ color: "#e4f1ff", fontSize: 13, fontWeight: 500 }}>☆</span>
+                <span style={{ color: "#e4f1ff", fontSize: 13, fontWeight: 600 }}>9.9</span>
               </div>
             </div>
             <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
-              <span style={{ color: "#ffffff", fontSize: 13, fontWeight: 600 }}>{currency || "USD"}</span>
-              <span style={{ color: "#ffffff", fontSize: 24, fontWeight: 800 }}>{displayPrice}</span>
+              <span style={{ color: "#e4f1ff", fontSize: 13, fontWeight: 600 }}>{currency || "USD"}</span>
+              <span style={{ color: "#e4f1ff", fontSize: 24, fontWeight: 800 }}>{displayPrice}</span>
             </div>
           </div>
 
           {/* Grid: Total Amount / Profit */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", borderTop: "1px solid rgba(255,255,255,0.15)", borderBottom: "1px solid rgba(255,255,255,0.15)" }}>
-            <div style={{ padding: "14px 12px", textAlign: "center", borderRight: "1px solid rgba(255,255,255,0.15)" }}>
-              <div style={{ fontSize: 11, fontWeight: 700, color: "#ffffff", marginBottom: 6, letterSpacing: 0.4 }}>TOTAL AMOUNT</div>
-              <div style={{ fontSize: 10, fontWeight: 600, color: "#ffffff", marginBottom: 4 }}>{currency || "USD"}</div>
-              <div style={{ fontSize: 18, fontWeight: 800, color: "#ffffff" }}>{displayPrice}</div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", borderTop: "1px solid rgba(0,200,240,0.28)", borderBottom: "1px solid rgba(0,200,240,0.28)" }}>
+            <div style={{ padding: "14px 12px", textAlign: "center", borderRight: "1px solid rgba(0,200,240,0.22)" }}>
+              <div style={{ fontSize: 11, fontWeight: 700, color: "#e4f1ff", marginBottom: 6, letterSpacing: 0.4 }}>TOTAL AMOUNT</div>
+              <div style={{ fontSize: 10, fontWeight: 600, color: "#e4f1ff", marginBottom: 4 }}>{currency || "USD"}</div>
+              <div style={{ fontSize: 18, fontWeight: 800, color: "#e4f1ff" }}>{displayPrice}</div>
             </div>
             <div style={{ padding: "14px 12px", textAlign: "center" }}>
-              <div style={{ fontSize: 11, fontWeight: 700, color: "#ffffff", marginBottom: 6, letterSpacing: 0.4 }}>PROFIT</div>
-              <div style={{ fontSize: 10, fontWeight: 600, color: "#ffffff", marginBottom: 4 }}>{currency || "USD"}</div>
-              <div style={{ fontSize: 18, fontWeight: 800, color: "#ffffff" }}>{displayCommission}</div>
+              <div style={{ fontSize: 11, fontWeight: 700, color: "#e4f1ff", marginBottom: 6, letterSpacing: 0.4 }}>PROFIT</div>
+              <div style={{ fontSize: 10, fontWeight: 600, color: "#e4f1ff", marginBottom: 4 }}>{currency || "USD"}</div>
+              <div style={{ fontSize: 18, fontWeight: 800, color: "#e4f1ff" }}>{displayCommission}</div>
             </div>
           </div>
 
           {/* Created / Order Code */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", borderBottom: "1px solid rgba(255,255,255,0.15)" }}>
-            <div style={{ padding: "12px", borderRight: "1px solid rgba(255,255,255,0.15)" }}>
-              <div style={{ fontSize: 12, fontWeight: 600, color: "#ffffff", marginBottom: 4 }}>Created</div>
-              <div style={{ fontSize: 11, fontWeight: 700, color: "#ffffff" }}>{formatDate(product.createdAt || currentTask.createdAt)}</div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", borderBottom: "1px solid rgba(0,200,240,0.28)" }}>
+            <div style={{ padding: "12px", borderRight: "1px solid rgba(0,200,240,0.22)" }}>
+              <div style={{ fontSize: 12, fontWeight: 600, color: "#e4f1ff", marginBottom: 4 }}>Created</div>
+              <div style={{ fontSize: 11, fontWeight: 700, color: "#e4f1ff" }}>{formatDate(product.createdAt || currentTask.createdAt)}</div>
             </div>
             <div style={{ padding: "12px" }}>
-              <div style={{ fontSize: 12, fontWeight: 600, color: "#ffffff", marginBottom: 4 }}>Order Code</div>
-              <div style={{ fontSize: 11, fontWeight: 700, color: "#ffffff", wordBreak: "break-all" }}>{currentTask.taskCode}</div>
+              <div style={{ fontSize: 12, fontWeight: 600, color: "#e4f1ff", marginBottom: 4 }}>Order Code</div>
+              <div style={{ fontSize: 11, fontWeight: 700, color: "#e4f1ff", wordBreak: "break-all" }}>{currentTask.taskCode}</div>
             </div>
           </div>
 
@@ -809,8 +809,8 @@ const Tasks = () => {
               disabled={submitState !== ""} 
               style={{ 
                 width: "100%", 
-                background: submitState !== "" ? "#999999" : "#ffffff", 
-                color: "#1a1a1a", 
+                background: submitState !== "" ? "#31547d" : "linear-gradient(110deg, #00c8f0 0%, #087bda 55%, #7138e8 100%)", 
+                color: "#ffffff", 
                 border: 0, 
                 padding: "14px 10px", 
                 borderRadius: 50, 
@@ -823,12 +823,12 @@ const Tasks = () => {
               }}
               onMouseEnter={(e) => {
                 if (submitState === "") {
-                  e.currentTarget.style.background = "#f0f0f0";
+                  e.currentTarget.style.filter = "brightness(1.08)";
                 }
               }}
               onMouseLeave={(e) => {
                 if (submitState === "") {
-                  e.currentTarget.style.background = "#ffffff";
+                  e.currentTarget.style.filter = "none";
                 }
               }}
             >
@@ -848,13 +848,31 @@ const Tasks = () => {
 
   return (
     <div className="tasks-page">
-      <header className="dashboard-header">
-        <img src={logo} alt="Instrument" className="dashboard-logo" />
+      <header
+        className="dashboard-header"
+        style={{
+          background: "linear-gradient(90deg, #00c8f0 0%, #087bda 55%, #7138e8 100%) bottom / 100% 2px no-repeat, #0b2d63",
+          borderBottom: "0",
+          boxSizing: "border-box",
+        }}
+      >
+        <img
+          src={logo}
+          alt="Instrument"
+          className="dashboard-logo"
+          style={{ filter: "brightness(0) invert(1)" }}
+        />
         <div className="dashboard-header-actions">
           <button
             type="button"
             className="dashboard-contact"
             onClick={() => setShowServiceModal(true)}
+            style={{
+              color: "#e4f1ff",
+              background: "rgba(8, 38, 83, 0.45)",
+              border: "1.5px solid #087bda",
+              boxShadow: "inset 0 0 0 1px rgba(0,200,240,0.08)",
+            }}
           >
             Contact
           </button>
@@ -865,9 +883,9 @@ const Tasks = () => {
             onClick={() => navigate("/profile")}
             aria-label="Open menu"
           >
-            <span />
-            <span />
-            <span />
+            <span style={{ background: "#ffffff" }} />
+            <span style={{ background: "#ffffff" }} />
+            <span style={{ background: "#ffffff" }} />
           </button>
         </div>
       </header>
