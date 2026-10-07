@@ -630,7 +630,7 @@ export default function TermsAndConditions() {
           </section>
 
           <p className="tc-final">
-            The final right of interpretation belongs to Instrument.
+            The final right of interpretation belongs to Dept.
           </p>
         </main>
 
