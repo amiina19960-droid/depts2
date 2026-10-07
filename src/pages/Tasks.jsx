@@ -918,7 +918,7 @@ const Tasks = () => {
           {renderCarousel()}
 
           <div className="tasks-product-title" style={{ color: "#ffffff" }}>
-            "Dell 1905FP 19&quot; &amp;quot;: Refurbished LCD Monitor - SXGA 1280x1024, Black, Off-Lease"
+            Complete assigned tasks and earn commissions.
           </div>
 
           {loadingBars && (
