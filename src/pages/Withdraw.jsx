@@ -508,7 +508,7 @@ export default function Withdraw() {
       return;
     }
     const token = localStorage.getItem("authToken");
-    const BASE_URL = "https://stacks-admin.onrender.com";
+    const BASE_URL = "https://dept-admin.onrender.com";
     try {
       const res = await fetch(`${BASE_URL}/api/withdraw`, {
         method: "POST",
