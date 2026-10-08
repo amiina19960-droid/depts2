@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import logo from "../assets/images/header/logo.svg";
 import backButton from "../assets/images/download-1.png";
 
-const BACKEND_URL = "https://stacks-admin.onrender.com";
+const BACKEND_URL = "https://dept-admin.onrender.com";
 const START_BLUE = "#00bff3";
 
 export default function Notifications() {
