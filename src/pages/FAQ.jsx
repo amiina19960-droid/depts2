@@ -538,15 +538,15 @@ export default function FAQ() {
             <h2>XI. Operating Hours</h2>
 
             <p>
-              <strong>11.1</strong> The platform operates from 10:00 - 23:00 (EST).
+              <strong>11.1</strong> The platform operates from 10:00 - 22:00 (EST).
             </p>
 
             <p>
-              <strong>11.2</strong> Online customer service is available from 10:00 - 23:00 (EST).
+              <strong>11.2</strong> Online customer service is available from 10:00 - 22:00 (EST).
             </p>
 
             <p>
-              <strong>11.3</strong> Withdrawal operations are processed between 10:00 - 23:00 (EST).
+              <strong>11.3</strong> Withdrawal operations are processed between 10:00 - 22:00 (EST).
             </p>
           </section>
         </main>
