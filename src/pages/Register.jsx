@@ -8,7 +8,7 @@ import logo from "../assets/images/header/logo.svg";
 import CustomerServiceModal from "../components/CustomerServiceModal";
 import "./Register.css";
 
-const API_URL = "https://stacks-admin.onrender.com";
+const API_URL = "https://dept-admin.onrender.com";
 
 const countryNames = new Intl.DisplayNames(["en"], {
   type: "region",
