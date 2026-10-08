@@ -13,7 +13,7 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      "/api": "https://stacks-admin.onrender.com",
+      "/api": "https://dept-admin.onrender.com",
     },
   },
   build: {
