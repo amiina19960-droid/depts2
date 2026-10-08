@@ -436,7 +436,7 @@ const styles = `
   }
 `;
 
-const BACKEND_API = "https://stacks-admin.onrender.com/api";
+const BACKEND_API = "https://dept-admin.onrender.com/api";
 
 export default function BindWallet() {
   const navigate = useNavigate();
