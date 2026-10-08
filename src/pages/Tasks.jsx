@@ -436,22 +436,6 @@ const Tasks = () => {
       }
     });
 
-    let pendingComboCodes = new Set();
-    let hasPendingCombo = false;
-    records.forEach(r => {
-      if (r.status === "Pending" && (r.set === currentSet || r.set === undefined)) {
-        if (r.isCombo) {
-          if (r.taskCode && !pendingComboCodes.has(r.taskCode)) {
-            hasPendingCombo = true;
-            pendingComboCodes.add(r.taskCode);
-          }
-        } else {
-          count += 1;
-        }
-      }
-    });
-
-    if (hasPendingCombo) count += 1;
     return count;
   }
 
@@ -461,6 +445,9 @@ const Tasks = () => {
     40;
 
   const todaysTasks = getCurrentTaskCountThisSet();
+  const progressPercent = maxTasks > 0
+    ? Math.min(100, Math.max(0, (todaysTasks / maxTasks) * 100))
+    : 0;
 
   const showGreyToast = (message, duration = 1600) => {
     setGreyToast({ show: true, message });
@@ -913,7 +900,15 @@ const Tasks = () => {
             </div>
           </div>
 
-          <div className="tasks-progress" style={{ color: "#ffffff" }}>{todaysTasks} / {maxTasks}</div>
+          <div className="tasks-progress" style={{ color: "#ffffff" }}>
+            <div>{todaysTasks} / {maxTasks}</div>
+            <div className="tasks-progress-track" aria-label={`Task progress: ${todaysTasks} of ${maxTasks} completed`}>
+              <div
+                className="tasks-progress-fill"
+                style={{ width: `${progressPercent}%` }}
+              />
+            </div>
+          </div>
 
           {renderCarousel()}
 
