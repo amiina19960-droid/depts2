@@ -33,7 +33,7 @@ import recordsIcon from "../assets/images/tabBar/records.png";
 
 import CustomerServiceModal from "../components/CustomerServiceModal";
 
-const API_URL = "https://stacks-admin.onrender.com";
+const API_URL = "https://dept-admin.onrender.com";
 
 const styles = `
   html,
