@@ -7,7 +7,7 @@ import React, {
 
 // Vite uses import.meta.env instead of process.env.
 const API_URL =
-  import.meta.env.VITE_API_URL || "https://stacks-admin.onrender.com";
+  import.meta.env.VITE_API_URL || "https://dept-admin.onrender.com";
 
 const SettingsContext = createContext({
   settings: null,
