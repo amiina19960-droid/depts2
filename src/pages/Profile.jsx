@@ -27,7 +27,7 @@ import recordsIcon from "../assets/images/tabBar/records.png";
 import backIcon from "../assets/images/download-1.png";
 import copyIcon from "../assets/images/download-2.png";
 
-const API_URL = "https://stacks-admin.onrender.com";
+const API_URL = "https://dept-admin.onrender.com";
 
 const START_DARK = "#087fce";
 const CREDIT_PURPLE = "linear-gradient(90deg, #08c7e8 0%, #168be8 55%, #7545e8 100%)";
