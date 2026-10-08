@@ -522,7 +522,7 @@ const Records = () => {
 
         <button className="bottom-item starting" type="button" onClick={() => navigate("/tasks")}>
           <img src={startingIcon} alt="Starting" />
-          <span style={{ fontWeight: 700 }}>Starting</span>
+          <span>Starting</span>
         </button>
 
         <button className="bottom-item" type="button" onClick={() => navigate("/records")}>
