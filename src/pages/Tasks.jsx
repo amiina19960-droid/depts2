@@ -981,7 +981,7 @@ const Tasks = () => {
         <div className="tasks-notice" style={{ borderColor: "rgba(255,255,255,0.2)" }}>
           <div className="tasks-notice-title" style={{ color: "#ffffff" }}>Important Notice</div>
           <div className="tasks-notice-body" style={{ color: "#cccccc" }}>
-            Online Support Hours 10:00 AM - 11:00 PM<br />
+            Online Support Hours 10:00 AM - 10:00 PM<br />
             Please contact online support for your assistance
           </div>
         </div>
