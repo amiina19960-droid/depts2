@@ -226,6 +226,7 @@ const styles = `
     height: clamp(22px, 3.2vw, 42px);
     padding: clamp(3px, 0.55vw, 6px);
     object-fit: contain;
+    filter: brightness(0) invert(1);
     border: 1px solid #00bff3;
     border-radius: 50%;
     background: #0b2a4d;
