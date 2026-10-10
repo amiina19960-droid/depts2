@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CustomerServiceModal from "../components/CustomerServiceModal";
 import logo from "../assets/images/header/logo.svg";
-import bannerVideo from "../assets/images/INSTRUMENT clicp.mp4";
+import bannerVideo from "../assets/images/Abouts.mp4";
 import backButton from "../assets/images/download-1.png";
 
 const styles = `
