@@ -226,14 +226,11 @@ const styles = `
     height: clamp(22px, 3.2vw, 42px);
     padding: clamp(3px, 0.55vw, 6px);
     object-fit: contain;
-    border: 1px solid rgba(0, 191, 243, 0.28);
+    border: 1px solid #00bff3;
     border-radius: 50%;
-    background: linear-gradient(
-      145deg,
-      rgba(0, 191, 243, 0.13),
-      rgba(112, 72, 223, 0.13)
-    );
-    box-shadow: 0 0 14px rgba(0, 191, 243, 0.08);
+    background: #0b2a4d;
+    opacity: 1;
+    box-shadow: 0 0 14px rgba(0, 191, 243, 0.18);
   }
 
   .dashboard-notice-track {
@@ -1500,6 +1497,63 @@ export default function Dashboard() {
           error={withdrawError}
           loading={withdrawLoading}
         />
+
+        <button
+          type="button"
+          onClick={() => setShowServiceModal(true)}
+          aria-label="Open customer support"
+          title="Customer support"
+          style={{
+            position: "fixed",
+            right: "16px",
+            bottom: "112px",
+            width: "58px",
+            height: "58px",
+            borderRadius: "50%",
+            border: "2px solid #00bff3",
+            background: "linear-gradient(145deg, #087cff, #0756d8)",
+            color: "#fff",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            cursor: "pointer",
+            zIndex: 1000,
+            boxShadow: "0 4px 14px rgba(0, 80, 220, 0.4)",
+            opacity: 1,
+          }}
+        >
+          <svg
+            viewBox="0 0 64 64"
+            aria-hidden="true"
+            style={{ position: "absolute", width: "42px", height: "42px", top: "4px" }}
+          >
+            <path
+              d="M10 32a22 22 0 0 1 44 0"
+              fill="none"
+              stroke="white"
+              strokeWidth="4"
+              strokeLinecap="round"
+            />
+            <rect x="6" y="29" width="10" height="19" rx="5" fill="#fff" />
+            <rect x="48" y="29" width="10" height="19" rx="5" fill="#fff" />
+          </svg>
+          <span style={{ fontSize: "18px", fontWeight: 800, lineHeight: 1, marginTop: "7px" }}>
+            CS
+          </span>
+          <span
+            aria-hidden="true"
+            style={{
+              position: "absolute",
+              width: "13px",
+              height: "6px",
+              borderRadius: "5px",
+              background: "#fff",
+              right: "12px",
+              bottom: "10px",
+              transform: "rotate(-25deg)",
+            }}
+          />
+        </button>
 
         <CustomerServiceModal
           open={showServiceModal}
