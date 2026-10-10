@@ -157,7 +157,7 @@ function shuffle(array) {
 }
 
 function makeLocalProductList(start = 100, end = 200) {
-  const base = "/depts2/assets/images/products/";
+  const base = "/assets/images/products/";
   const list = [];
   for (let i = start; i <= end; i++) {
     list.push(`${base}product1(${i}).png`);
@@ -175,7 +175,7 @@ const Tasks = () => {
         return firstNine;
       }
     } catch (e) {}
-    const base = "/depts2/assets/images/products/";
+    const base = "/assets/images/products/";
     return Array.from({ length: 9 }, (_, i) => `${base}product1(${100 + i}).png`);
   });
 
