@@ -4,7 +4,7 @@ import { resolve } from "path";
 import { copyFileSync, existsSync } from "fs";
 
 export default defineConfig({
-  base: "/depts2/",
+  base: "/",
   plugins: [react()],
   resolve: {
     alias: {
