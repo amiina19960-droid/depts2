@@ -459,13 +459,60 @@ export default function Register() {
         </p>
       </main>
 
-      <button
+<button
         type="button"
-        className="register-support-button"
         onClick={() => setShowCustomerModal(true)}
         aria-label="Open customer support"
+        title="Customer support"
+        style={{
+          position: "fixed",
+          right: "24px",
+          bottom: "24px",
+          width: "76px",
+          height: "76px",
+          borderRadius: "50%",
+          border: "none",
+          background: "linear-gradient(145deg, #087cff, #0756d8)",
+          color: "#fff",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          cursor: "pointer",
+          zIndex: 1000,
+          boxShadow: "0 4px 14px rgba(0, 80, 220, 0.35)",
+        }}
       >
-        ?
+        <svg
+          viewBox="0 0 64 64"
+          aria-hidden="true"
+          style={{ position: "absolute", width: "54px", height: "54px", top: "7px" }}
+        >
+          <path
+            d="M10 32a22 22 0 0 1 44 0"
+            fill="none"
+            stroke="white"
+            strokeWidth="4"
+            strokeLinecap="round"
+          />
+          <rect x="6" y="29" width="10" height="19" rx="5" fill="#9aa8ba" />
+          <rect x="48" y="29" width="10" height="19" rx="5" fill="#9aa8ba" />
+        </svg>
+        <span style={{ fontSize: "24px", fontWeight: 800, lineHeight: 1, marginTop: "5px" }}>
+          CS
+        </span>
+        <span
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            width: "17px",
+            height: "7px",
+            borderRadius: "5px",
+            background: "#697b91",
+            right: "17px",
+            bottom: "15px",
+            transform: "rotate(-25deg)",
+          }}
+        />
       </button>
 
       <CustomerServiceModal
