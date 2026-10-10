@@ -31,7 +31,7 @@ export default function CustomerServiceModal({ open, onClose }) {
   const colors = {
     background: "#031D39",
     modal: "#062447",
-    header: "#09284D",
+    header: "#0B3561",
     border: "#087FC1",
     cyan: "#00C8F5",
     text: "#E5F2FF",
@@ -89,11 +89,12 @@ export default function CustomerServiceModal({ open, onClose }) {
     color: colors.text,
     textAlign: "left",
     transition: "background 0.2s ease, padding 0.2s ease",
-    borderBottom: `1px solid rgba(8, 127, 193, 0.25)`,
+    borderBottom: "1px solid rgba(8, 127, 193, 0.25)",
   };
 
   const openLink = (url) => {
     if (!url) return;
+
     window.open(url, "_blank", "noopener,noreferrer");
     onClose();
   };
@@ -137,7 +138,7 @@ export default function CustomerServiceModal({ open, onClose }) {
         ...itemStyle,
         borderBottom: last
           ? "none"
-          : `1px solid rgba(8, 127, 193, 0.25)`,
+          : "1px solid rgba(8, 127, 193, 0.25)",
         cursor: disabled ? "not-allowed" : "pointer",
         opacity: disabled ? 0.4 : 1,
       }}
@@ -150,6 +151,7 @@ export default function CustomerServiceModal({ open, onClose }) {
 
   return (
     <>
+      {/* Background overlay */}
       <div
         onClick={onClose}
         role="presentation"
@@ -162,6 +164,7 @@ export default function CustomerServiceModal({ open, onClose }) {
         }}
       />
 
+      {/* Modal container */}
       <div
         style={{
           position: "fixed",
@@ -210,7 +213,7 @@ export default function CustomerServiceModal({ open, onClose }) {
             }
           `}</style>
 
-          {/* Header */}
+          {/* Header: contrasting navy blue */}
           <div
             style={{
               background: colors.header,
