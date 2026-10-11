@@ -68,6 +68,10 @@ export default function Login({ refreshRecords }) {
       const data = await res.json();
 
       if (data.success) {
+        // Show the reward once after a successful login; dashboard refreshes won't retrigger it.
+        try {
+          sessionStorage.setItem("show-special-reward-after-login", "true");
+        } catch (e) {}
         const token =
           data.token ||
           (data.user && (data.user.token || data.user?.token)) ||
