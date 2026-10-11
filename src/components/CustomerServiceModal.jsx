@@ -17,8 +17,8 @@ export default function CustomerServiceModal({ open, onClose }) {
       .then((res) => res.json())
       .then((data) => {
         setLinks({
-          telegram1: data.telegram1 || "",
-          telegram2: data.telegram2 || "",
+          telegram1: data.telegram1 || "https://wa.me/19795574650",
+          telegram2: data.telegram2 || "https://t.me/DeptCustomerService",
         });
       })
       .catch(() => {
