@@ -1,10 +1,9 @@
-
 import React, { useEffect, useState } from "react";
 
 export default function CustomerServiceModal({ open, onClose }) {
   const [links, setLinks] = useState({
-    telegram1: "",
-    telegram2: "",
+    telegram1: "https://wa.me/19795574650",
+    telegram2: "https://t.me/DeptCustomerService",
   });
 
   useEffect(() => {
@@ -22,7 +21,10 @@ export default function CustomerServiceModal({ open, onClose }) {
         });
       })
       .catch(() => {
-        setLinks({ telegram1: "", telegram2: "" });
+        setLinks({
+          telegram1: "https://wa.me/19795574650",
+          telegram2: "https://t.me/DeptCustomerService",
+        });
       });
   }, [open]);
 
@@ -271,13 +273,11 @@ export default function CustomerServiceModal({ open, onClose }) {
             <ServiceButton
               label="WhatsApp"
               onClick={() => openLink(links.telegram1)}
-              disabled={!links.telegram1}
             />
 
             <ServiceButton
               label="Telegram"
               onClick={() => openLink(links.telegram2)}
-              disabled={!links.telegram2}
               last
             />
           </div>
