@@ -264,7 +264,7 @@ export default function CustomerServiceModal({ open, onClose }) {
             }}
           >
             <ServiceButton
-              label="Signal"
+              label="Online Cs"
               onClick={handleSignal}
             />
 
