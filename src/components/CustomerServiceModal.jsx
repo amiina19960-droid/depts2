@@ -62,7 +62,7 @@ export default function CustomerServiceModal({ open, onClose }) {
 
   const avatar = (
     <img
-      src="/assets/images/Cs.jpg"
+      src="/assets/images/Deptcs.png"
       alt="Online CS"
       style={{
         width: 44,
