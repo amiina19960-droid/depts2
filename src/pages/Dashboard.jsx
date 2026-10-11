@@ -14,7 +14,6 @@ import faqIcon from "../assets/images/home/FAQs-93891c56.png";
 import aboutIcon from "../assets/images/home/About-453ef9ca.png";
 import vipIcon from "../assets/images/vip/Vip-5ce36f29.png";
 
-import specialRewardImage from "../assets/images/home/special-reward.png";
 
 import alphsenseImage from "../assets/images/dashboard/alphasense.jpg";
 import feeledImage from "../assets/images/dashboard/feeled.jpg";
@@ -948,8 +947,8 @@ function RewardModal({ onClose }) {
     <div className="reward-overlay" role="dialog" aria-modal="true">
       <div className="reward-modal">
         <img
-          src={specialRewardImage}
-          alt="Instrument special reward announcement"
+          src="/assets/special-reward.png"
+          alt="DEPT special reward announcement"
           className="reward-image"
         />
 
@@ -1171,8 +1170,14 @@ export default function Dashboard() {
   }, [navigate]);
 
   useEffect(() => {
-    // Show the reward announcement whenever the dashboard mounts after login.
-    setShowReward(true);
+    // Show the reward only when arriving from a successful login, not on refresh.
+    const shouldShowReward =
+      sessionStorage.getItem("show-special-reward-after-login") === "true";
+
+    if (shouldShowReward) {
+      sessionStorage.removeItem("show-special-reward-after-login");
+      setShowReward(true);
+    }
   }, []);
 
   useEffect(() => {
