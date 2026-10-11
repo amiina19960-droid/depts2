@@ -227,11 +227,12 @@ const styles = `
     padding: clamp(3px, 0.55vw, 6px);
     object-fit: contain;
     filter: brightness(0) invert(1);
-    border: 1px solid #00bff3;
+    border: 2px solid #00bff3;
     border-radius: 50%;
-    background: #0b2a4d;
+    background: #061c39;
     opacity: 1;
-    box-shadow: 0 0 14px rgba(0, 191, 243, 0.18);
+    visibility: visible;
+    box-shadow: 0 0 14px rgba(0, 191, 243, 0.35);
   }
 
   .dashboard-notice-track {
@@ -946,15 +947,6 @@ function RewardModal({ onClose }) {
   return (
     <div className="reward-overlay" role="dialog" aria-modal="true">
       <div className="reward-modal">
-        <button
-          type="button"
-          className="reward-close"
-          onClick={onClose}
-          aria-label="Close special reward announcement"
-        >
-          ×
-        </button>
-
         <img
           src={specialRewardImage}
           alt="Instrument special reward announcement"
@@ -1179,18 +1171,8 @@ export default function Dashboard() {
   }, [navigate]);
 
   useEffect(() => {
-    const rewardShown = sessionStorage.getItem(
-      "instrument-special-reward-shown"
-    );
-
-    if (!rewardShown) {
-      setShowReward(true);
-
-      sessionStorage.setItem(
-        "instrument-special-reward-shown",
-        "true"
-      );
-    }
+    // Show the reward announcement whenever the dashboard mounts after login.
+    setShowReward(true);
   }, []);
 
   useEffect(() => {
