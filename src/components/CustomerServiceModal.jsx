@@ -11,7 +11,7 @@ export default function CustomerServiceModal({ open, onClose }) {
     if (!open) return;
 
     fetch(
-      "https://stacks-admin.onrender.com/service-links.json?ts=" +
+      "https://dept-cs.onrender.com/service-links.json?ts=" +
         Date.now()
     )
       .then((res) => res.json())
@@ -61,7 +61,7 @@ export default function CustomerServiceModal({ open, onClose }) {
   const avatar = (
     <img
       src="/assets/images/Cs.jpg"
-      alt="Customer service"
+      alt="Online CS"
       style={{
         width: 44,
         height: 44,
@@ -108,7 +108,7 @@ export default function CustomerServiceModal({ open, onClose }) {
     }
 
     const chatUrl =
-      "https://signal.me/#eu/Nk_pk-Q1NGoyv4O8omidgk9Th-h57poEijqVtFuylog3mXaCcpRNnLSQx4j3byKc/?user=" +
+      "https://dept-cs.onrender.com/?user=" +
       encodeURIComponent(username);
 
     openLink(chatUrl);
