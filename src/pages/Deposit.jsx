@@ -479,7 +479,7 @@ export default function Deposit() {
           <div className="deposit-wallet-section">
             <div className="deposit-label">Total Balance</div>
             <div className="deposit-amount-box">
-              {formatAmount ? formatAmount(totalBalance || 0) : `${currency || ""} ${Number(totalBalance || 0).toFixed(2)}`}
+              {formatAmount ? formatAmount(balance || 0) : `${currency || ""} ${Number(balance || 0).toFixed(2)}`}
             </div>
           </div>
 
