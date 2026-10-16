@@ -968,7 +968,7 @@ const Tasks = () => {
             <div style={{ color: "#ffffff" }}>Fusion Campaign Reward</div>
             <div className="reward-value">
               <span className="currency" style={{ color: "#ffffff" }}>{currency || "USD"}</span>
-              <strong style={{ color: "#ffffff" }}>22,000</strong>
+              <strong style={{ color: "#ffffff" }}>22000</strong>
             </div>
           </div>
         </section>
